@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jason T Liu | Profile</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+      background: #f6f8fa;
+      color: #222;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      padding: 40px 32px;
+    }
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+    .avatar {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #e1e4e8;
+    }
+    .profile-info {
+      flex: 1;
+    }
+    .name {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .org {
+      font-size: 1.1rem;
+      color: #586069;
+      margin-bottom: 8px;
+    }
+    .links {
+      margin-top: 8px;
+    }
+    .links a {
+      color: #0366d6;
+      text-decoration: none;
+      margin-right: 16px;
+      font-size: 1rem;
+    }
+    .section {
+      margin-bottom: 32px;
+    }
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #24292e;
+      border-left: 4px solid #0366d6;
+      padding-left: 10px;
+    }
+    ul, .papers, .education {
+      list-style: none;
+      padding-left: 0;
+      margin-left: 0;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 16px 4px; }
+      .profile-header { flex-direction: column; gap: 16px; }
+      .avatar { width: 140px; height: 140px; }
+    }
+    .contact, .social-links {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4px;
+      gap: 8px;
+    }
+    .icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 2px;
+      vertical-align: middle;
+    }
+    .contact .icon {
+      margin-right: 8px;
+    }
+    .bio-text {
+      margin-bottom: 24px;
+      line-height: 1.8;
+    }
+    .papers li {
+      margin-bottom: 20px;
+      padding-left: 12px;
+    }
+    .paper-title {
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+    .paper-authors {
+      margin-left: 16px;
+      font-size: 0.98em;
+      color: #444;
+    }
+    .paper-venue {
+      margin-left: 16px;
+      font-size: 0.98em;
+      color: #666;
+    }
+    .paper-link a {
+      margin-left: 16px;
+      font-size: 0.98em;
+      color: #0366d6;
+      text-decoration: underline;
+    }
+    .education li {
+      margin-bottom: 18px;
+      padding-left: 12px;
+    }
+    .edu-school {
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+    .edu-degree, .edu-gpa {
+      margin-left: 16px;
+      font-size: 0.98em;
+      color: #444;
+    }
+    .social-links {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      gap: 16px;
+    }
+    .links-space {
+      height: 10px;
+    }
+    .keywords {
+      margin: 10px 0 24px 0;
+      font-size: 1.05em;
+      color: #333;
+    }
+    .keyword {
+      display: inline-block;
+      background: #e6f0fa;
+      color: #0366d6;
+      border-radius: 12px;
+      padding: 2px 12px;
+      margin: 2px 6px 2px 0;
+      font-size: 0.98em;
+    }
+    .education-timeline {
+      position: relative;
+      margin-left: 8px;
+      padding-left: 8px;
+    }
+    .education {
+      position: relative;
+    }
+    .edu-item {
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      min-height: 54px;
+    }
+    .edu-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #fff;
+      border: 3px solid #0366d6;
+      margin-right: 18px;
+      margin-top: 8px;
+      z-index: 2;
+      box-sizing: border-box;
+    }
+    .edu-item.current .edu-dot {
+      background: #0366d6;
+      border: 3px solid #0366d6;
+    }
+    .edu-content {
+      flex: 1;
+    }
+    .education::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 0;
+      width: 0;
+      height: 100%;
+      border-left: 2px solid #b3c6e0;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile-header">
+      <!-- Edit your avatar image path -->
+      <img class="avatar" src="img/Portrait.jpg" alt="Portrait">
+      <div class="profile-info">
+        <!-- Edit your name -->
+        <div class="name">Jason Tong Liu</div>
+        <!-- Edit your positions and affiliations -->
+        <div class="org">
+          <div><strong>Research Assistant</strong> at AIM for Health Lab, Monash University</div>
+          <div><strong>B.C.S. Student</strong> at Faculty of Info. Tech., Monash University</div>
+        </div>
+        <div class="links">
+          <div class="contact">
+            <img src="img/envelope.svg" alt="Email" class="icon">
+            <a href="mailto:Jason.Liu1@monash.edu">Jason.Liu1@monash.edu</a>
+          </div>
+          <div class="social-links">
+            <img src="img/linkedin.svg" alt="LinkedIn" class="icon">
+            <a href="https://www.linkedin.com/in/jasontongliu/" target="_blank">LinkedIn</a>
+            <img src="img/google-scholar.svg" alt="Google Scholar" class="icon">
+            <a href="https://scholar.google.com.au/citations?hl=en&user=ZLadjfMAAAAJ" target="_blank">Google Scholar</a>
+            <img src="img/researchgate.svg" alt="ResearchGate" class="icon">
+            <a href="https://www.researchgate.net/profile/Tong-Liu-181" target="_blank">ResearchGate</a>
+          </div>
+          <div class="keywords">
+            <span class="keyword">Foundation Models</span>
+            <span class="keyword">Multimodal Analytics</span>
+            <span class="keyword">Biomedical AI</span>
+            <!-- You can add or remove keywords here -->
+          </div>
+          <div class="links-space"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Biography</div>
+      <!-- Edit your biography -->
+      <p class="bio-text">Mr. Tong Liu (a.k.a Jason Liu, Jason Tong Liu) is a B.C.S. in Data Science student 
+        at Monash University and a Research Assistant at AIM for Health Lab, Monash University supervised 
+        by A/Prof. Zongyuan Ge and Dr. Litao Yang. His research spans on various domains, including foundation models, multimodal analytics, and interdisciplinary applications of AI techniques, especially in biomedical and education.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Academic Works</div>
+      <!-- Edit your academic works list -->
+      <ul class="papers">
+        <li>
+          <div class="paper-title"><strong>AI proctoring for offline examinations with 2-Longitudinal-Stream Convolutional Neural Networks</strong></div>
+          <div class="paper-authors">T. Liu</div>
+          <div class="paper-venue">Computers and Education: Artificial Intelligence 4, 100115, 2023</div>
+          <div class="paper-link"><a href="https://doi.org/10.1016/j.caeai.2022.100115">https://doi.org/10.1016/j.caeai.2022.100115</a></div>
+        </li>
+        <li>
+          <div class="paper-title"><strong>Image Quality Improve by Super Resolution Generative Adversarial Networks</strong></div>
+          <div class="paper-authors">X Hou, T Liu, S Wang, L Zhang</div>
+          <div class="paper-venue">2nd International Conference on Intelligent Computing and Human-Computer Interaction (ICHCI), 2021</div>
+          <div class="paper-link"><a href="https://doi.org/10.1109/ichci54629.2021.00031">https://doi.org/10.1109/ichci54629.2021.00031</a></div>
+        </li>
+        <!-- You can add more works -->
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Education Background</div>
+      <!-- Edit your education background -->
+      <div class="education-timeline">
+        <ul class="education">
+          <li class="edu-item current">
+            <div class="edu-dot"></div>
+            <div class="edu-content">
+              <div class="edu-school"><strong>Monash University</strong></div>
+              <div class="edu-degree">Bachelor of Computer Science (Data Science)</div>
+              <div class="edu-gpa">GPA: N/A</div>
+            </div>
+          </li>
+          <li class="edu-item">
+            <div class="edu-dot"></div>
+            <div class="edu-content">
+              <div class="edu-school"><strong>Monash College</strong></div>
+              <div class="edu-degree">Diploma of Information Technology</div>
+              <div class="edu-gpa">GPA: 3.75/4.00, Academic Excellence Student</div>
+            </div>
+          </li>
+          <!-- You can add more education experiences -->
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Patents</div>
+      <!-- Edit your patents -->
+      <ul>
+        <li>A visual aided proctoring system for face-to-face multi-person exams, CN 114267016 A, 2021 (Pending)</li>
+        <!-- You can add more patents -->
+      </ul>
+    </div>
+  </div>
+</body>
+</html> 
