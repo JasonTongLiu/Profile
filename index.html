@@ -91,6 +91,9 @@
       margin-bottom: 4px;
       gap: 8px;
     }
+    .contact {
+      margin-bottom: 8px;
+    }
     .icon {
       width: 20px;
       height: 20px;
@@ -102,7 +105,8 @@
     }
     .bio-text {
       margin-bottom: 24px;
-      line-height: 1.8;
+      line-height: 1.5;
+      padding-left: 12px;
     }
     .papers li {
       margin-bottom: 20px;
@@ -128,9 +132,49 @@
       color: #0366d6;
       text-decoration: underline;
     }
+    .education {
+      position: relative;
+      margin-left: 10px;
+      padding-left: 0;
+    }
     .education li {
-      margin-bottom: 18px;
-      padding-left: 12px;
+      position: relative;
+      padding-left: 32px;
+      margin-bottom: 0;
+      min-height: 40px;
+    }
+    .education li:not(:last-child) {
+      padding-bottom: 20px;
+    }
+    .education li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.5em;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #2186ff;
+      border: 3px solid #2186ff;
+      z-index: 2;
+      box-sizing: border-box;
+    }
+    .education li.current::before {
+      background: #fff;
+      border: 3px solid #2186ff;
+    }
+    .education li:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 16px;
+      width: 2px;
+      height: calc(100% - 8px);
+      background: #2186ff;
+      z-index: 1;
+    }
+    .edu-dot, .education-timeline::before {
+      display: none !important;
     }
     .edu-school {
       font-weight: bold;
@@ -171,51 +215,9 @@
       margin: 2px 6px 2px 0;
       font-size: 0.98em;
     }
-    .education-timeline {
-      position: relative;
-      margin-left: 8px;
-      padding-left: 8px;
-    }
-    .education {
-      position: relative;
-    }
-    .edu-item {
-      display: flex;
-      align-items: flex-start;
-      position: relative;
-      min-height: 54px;
-    }
-    .edu-dot {
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: #fff;
-      border: 3px solid #0366d6;
-      margin-right: 18px;
-      margin-top: 8px;
-      z-index: 2;
-      box-sizing: border-box;
-    }
-    .edu-item.current .edu-dot {
-      background: #0366d6;
-      border: 3px solid #0366d6;
-    }
-    .edu-content {
-      flex: 1;
-    }
-    .education::before {
-      content: '';
-      position: absolute;
-      left: 7px;
-      top: 0;
-      width: 0;
-      height: 100%;
-      border-left: 2px solid #b3c6e0;
-      z-index: 1;
-    }
     .patents li {
-      margin-bottom: 8px;
-      padding-left: 12px;
+      margin-bottom: 20px;
+      padding-left: 32px;
     }
   </style>
 </head>
@@ -236,6 +238,8 @@
           <div class="contact">
             <img src="img/envelope.svg" alt="Email" class="icon">
             <a href="mailto:Jason.Liu1@monash.edu">Jason.Liu1@monash.edu</a>
+            <img src="img/ORCID.webp" alt="ORCID" class="icon">
+            <a href="https://orcid.org/0000-0002-5047-3207" target="_blank">0000-0002-5047-3207</a>
           </div>
           <div class="social-links">
             <img src="img/linkedin.svg" alt="LinkedIn" class="icon">
@@ -244,10 +248,6 @@
             <a href="https://scholar.google.com.au/citations?hl=en&user=ZLadjfMAAAAJ" target="_blank">Google Scholar</a>
             <img src="img/researchgate.svg" alt="ResearchGate" class="icon">
             <a href="https://www.researchgate.net/profile/Tong-Liu-181" target="_blank">ResearchGate</a>
-          </div>
-          <div class="social-links">
-            <img src="img/ORCID.webp" alt="ORCID" class="icon">
-            <a href="https://orcid.org/0000-0002-5047-3207" target="_blank">0000-0002-5047-3207</a>
           </div>
           <div class="keywords">
             <span class="keyword">Foundation Models</span>
@@ -291,29 +291,25 @@
     <div class="section">
       <div class="section-title">Education Background</div>
       <!-- Edit your education background -->
-      <div class="education-timeline">
-        <ul class="education">
-          <li class="edu-item current">
-            <div class="edu-dot"></div>
-            <div class="edu-content">
-              <div class="edu-school"><strong>Monash University</strong></div>
-              <div class="edu-degree">Bachelor of Computer Science in Data Science</div>
-              <div class="edu-gpa">GPA: N/A</div>
-              <div class="edu-date">Feb 2025 - Present</div>
-            </div>
-          </li>
-          <li class="edu-item">
-            <div class="edu-dot"></div>
-            <div class="edu-content">
-              <div class="edu-school"><strong>Monash College</strong></div>
-              <div class="edu-degree">Diploma of Information Technology</div>
-              <div class="edu-gpa">GPA: 3.75/4.00, Academic Excellence Student</div>
-              <div class="edu-date">Feb 2024 - Oct 2024</div>
-            </div>
-          </li>
-          <!-- You can add more education experiences -->
-        </ul>
-      </div>
+      <ul class="education">
+        <li class="current">
+          <div class="edu-content">
+            <div class="edu-school"><strong>Monash University</strong></div>
+            <div class="edu-degree">Bachelor of Computer Science in Data Science</div>
+            <div class="edu-gpa">GPA: N/A</div>
+            <div class="edu-date">Feb 2025 - Present</div>
+          </div>
+        </li>
+        <li>
+          <div class="edu-content">
+            <div class="edu-school"><strong>Monash College</strong></div>
+            <div class="edu-degree">Diploma of Information Technology</div>
+            <div class="edu-gpa">GPA: 3.75/4.00, Academic Excellence Student</div>
+            <div class="edu-date">Feb 2024 - Oct 2024</div>
+          </div>
+        </li>
+        <!-- You can add more education experiences -->
+      </ul>
     </div>
 
     <div class="section">
