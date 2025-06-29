@@ -39,15 +39,21 @@
     .name {
       font-size: 2.2rem;
       font-weight: 700;
-      margin-bottom: 8px;
+      margin-bottom: 16px;
     }
     .org {
       font-size: 1.1rem;
       color: #586069;
+      margin-bottom: 16px;
+    }
+    .org div {
       margin-bottom: 8px;
     }
+    .org div:last-child {
+      margin-bottom: 0;
+    }
     .links {
-      margin-top: 8px;
+      margin-top: 16px;
     }
     .links a {
       color: #0366d6;
@@ -92,7 +98,7 @@
       vertical-align: middle;
     }
     .contact .icon {
-      margin-right: 8px;
+      margin-right: 2px;
     }
     .bio-text {
       margin-bottom: 24px;
@@ -135,11 +141,17 @@
       font-size: 0.98em;
       color: #444;
     }
+    .edu-date {
+      margin-left: 16px;
+      font-size: 0.98em;
+      color: #666;
+      font-style: italic;
+    }
     .social-links {
       display: flex;
       align-items: center;
       margin-bottom: 16px;
-      gap: 16px;
+      gap: 8px;
     }
     .links-space {
       height: 10px;
@@ -228,6 +240,10 @@
             <img src="img/researchgate.svg" alt="ResearchGate" class="icon">
             <a href="https://www.researchgate.net/profile/Tong-Liu-181" target="_blank">ResearchGate</a>
           </div>
+          <div class="social-links">
+            <img src="img/ORCID.webp" alt="ORCID" class="icon">
+            <a href="https://orcid.org/0000-0002-5047-3207" target="_blank">0000-0002-5047-3207</a>
+          </div>
           <div class="keywords">
             <span class="keyword">Foundation Models</span>
             <span class="keyword">Multimodal Analytics</span>
@@ -278,6 +294,7 @@
               <div class="edu-school"><strong>Monash University</strong></div>
               <div class="edu-degree">Bachelor of Computer Science (Data Science)</div>
               <div class="edu-gpa">GPA: N/A</div>
+              <div class="edu-date">Feb 2025 - Present</div>
             </div>
           </li>
           <li class="edu-item">
@@ -286,6 +303,7 @@
               <div class="edu-school"><strong>Monash College</strong></div>
               <div class="edu-degree">Diploma of Information Technology</div>
               <div class="edu-gpa">GPA: 3.75/4.00, Academic Excellence Student</div>
+              <div class="edu-date">Feb 2024 - Oct 2024</div>
             </div>
           </li>
           <!-- You can add more education experiences -->
