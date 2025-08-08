@@ -36,10 +36,26 @@
     .profile-info {
       flex: 1;
     }
+    .name-container {
+      display: flex;
+      align-items: flex-end;
+      gap: 136px;
+      margin-bottom: 16px;
+    }
+    .name-container .social-links {
+      display: flex;
+      align-items: flex-end;
+      gap: 16px;
+      margin-bottom: 0;
+    }
+    .name-container .social-links img {
+      vertical-align: bottom;
+      margin-bottom: 6px;
+    }
     .name {
       font-size: 2.2rem;
       font-weight: 700;
-      margin-bottom: 16px;
+      margin-bottom: 0;
     }
     .org {
       font-size: 1rem;
@@ -92,11 +108,11 @@
       gap: 8px;
     }
     .contact {
-      margin-bottom: 8px;
+      margin-bottom: 16px;
     }
     .icon {
-      width: 20px;
-      height: 20px;
+      width: 24px;
+      height: 24px;
       margin-right: 2px;
       vertical-align: middle;
     }
@@ -228,7 +244,20 @@
       <img class="avatar" src="img/Portrait.jpg" alt="Portrait">
       <div class="profile-info">
         <!-- Edit your name -->
-        <div class="name">Jason Tong Liu</div>
+        <div class="name-container">
+          <div class="name">Jason Tong Liu</div>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/jasontongliu/" target="_blank">
+              <img src="img/LINKEDIN.webp" alt="LinkedIn" class="icon">
+            </a>
+            <a href="https://scholar.google.com.au/citations?hl=en&user=ZLadjfMAAAAJ" target="_blank">
+              <img src="img/GOOGLESCHOLAR.png" alt="Google Scholar" class="icon">
+            </a>
+            <a href="https://www.researchgate.net/profile/Tong-Liu-181" target="_blank">
+              <img src="img/RESEARCHGATE.png" alt="ResearchGate" class="icon">
+            </a>
+          </div>
+        </div>
         <!-- Edit your positions and affiliations -->
         <div class="org">
           <div><strong>Research Assistant</strong> at AIM for Health Lab, Monash University</div>
@@ -236,18 +265,10 @@
         </div>
         <div class="links">
           <div class="contact">
-            <img src="img/envelope.svg" alt="Email" class="icon">
+            <img src="img/EMAIL.png" alt="Email" class="icon">
             <a href="mailto:Jason.Liu1@monash.edu">Jason.Liu1@monash.edu</a>
-            <img src="img/ORCID.webp" alt="ORCID" class="icon">
+            <img src="img/ORCID.png" alt="ORCID" class="icon">
             <a href="https://orcid.org/0000-0002-5047-3207" target="_blank">0000-0002-5047-3207</a>
-          </div>
-          <div class="social-links">
-            <img src="img/linkedin.svg" alt="LinkedIn" class="icon">
-            <a href="https://www.linkedin.com/in/jasontongliu/" target="_blank">LinkedIn</a>
-            <img src="img/google-scholar.svg" alt="Google Scholar" class="icon">
-            <a href="https://scholar.google.com.au/citations?hl=en&user=ZLadjfMAAAAJ" target="_blank">Google Scholar</a>
-            <img src="img/researchgate.svg" alt="ResearchGate" class="icon">
-            <a href="https://www.researchgate.net/profile/Tong-Liu-181" target="_blank">ResearchGate</a>
           </div>
           <div class="keywords">
             <span class="keyword">Foundation Models</span>
@@ -261,7 +282,7 @@
     </div>
 
     <div class="section">
-      <div class="section-title">Biography</div>
+      <div class="section-title">About Me</div>
       <!-- Edit your biography -->
       <p class="bio-text">Mr. Tong Liu (a.k.a Jason Liu, Jason Tong Liu) is a B.C.S. in Data Science student 
         at Monash University and a Research Assistant at AIM for Health Lab, Monash University supervised 
@@ -316,7 +337,7 @@
       <div class="section-title">Patents</div>
       <!-- Edit your patents -->
       <ul class="patents">
-        <li><strong>A visual aided proctoring system for face-to-face multi-person exams</strong>, patent number: ZL2021116070216, issued in 2025 by the China National Intellectual Property Administration (CNIPA)</li>
+        <li><strong>A visual aided proctoring system for face-to-face multi-person exams</strong>, patent number: CN202111607021.6, issued in 2025 by the China National Intellectual Property Administration (CNIPA)</li>
         <!-- You can add more patents -->
       </ul>
     </div>
